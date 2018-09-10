@@ -19,7 +19,7 @@ from distutils.core import Extension
 
 class uWSGIBuildExt(build_ext):
 
-    UWSGI_NAME = 'uwsgi'
+    UWSGI_NAME = 'pyuwsgi.pyuwsgi'
     UWSGI_PLUGIN = 'pyuwsgi'
 
     def build_extensions(self):
@@ -103,6 +103,7 @@ setup(
     author='Unbit',
     author_email='info@unbit.it',
     description='The uWSGI server',
+    packages=['pyuwsgi'],
     cmdclass={
         'build_ext': uWSGIBuildExt,
         },
